@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.0.2]
+
+### Fixed
+- Fixed bug with branch regex #1
+
 ## [0.0.1]
 
 

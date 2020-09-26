@@ -18,7 +18,7 @@ func main() {
 	status := flag.Bool("status", false, "formatting git status if any")
 	flag.Parse()
 	if *vers == true {
-		fmt.Println("Git Prettier version v0.0.1")
+		fmt.Println("Git Prettier version v0.0.2")
 		os.Exit(1)
 	}
 	if *status {
@@ -36,7 +36,9 @@ func gitBranch() (string){
 	cmd := exec.Command("git", "branch")
 	output, err := cmd.Output()
 	if err != nil {}
-	branch := strings.Split(string(output[:]), "* ")
+	rBranch    := regexp.MustCompile(`^\*\s.*`)
+	branch     := rBranch.FindAllString(string(output[:]), 1000)
+	branch     = strings.Split(strings.Join(branch, ""), "* ")
 	parsBranch := strings.Join(branch, "")
 	return strings.TrimSuffix(parsBranch, "\n")
 }
