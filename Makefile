@@ -1,5 +1,7 @@
 all: build run move
 
+dev: build run
+
 run:
 	@./bin/gp -status
 
