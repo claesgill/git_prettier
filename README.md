@@ -14,11 +14,41 @@ gp -v
 ```
 
 ## Usage
-`gp` only serves two flags `-v` and `-status`. The latter yield the git status on a pre-defined format and will only print values if in a git folder.  
+`gp` serves a couple of flags you may want to use. See the list underneath.
 
+| flag | type | default | description |
+| :--- | :--- | :------ | :---------- |
+| -v   | bool | false   | get the version |
+| -status   | bool | false   | formatting git status if any |
+| -c   | bool | false   | color the status output |
+| -b   | bool | false   | get active branch |
+| -m   | bool | false   | get number of tracked modified files |
+| -d   | bool | false   | get number of tracked deleted files |
+| -u   | bool | false   | get number of untracked files |
+
+### Examples
+#### `-status` 
+This flag yield the git status on a pre-defined format and will only print values if in a git folder.  
 ```sh
 gp -status
 >[master | +1 -2 U…]
+```
+You can also use the color flag `-c` in combination with `-status`.
+
+#### `-b` `-m` `-d` `-u`
+```sh
+gp -b
+>master
+gp -m
+>+1
+````
+You can use flags in combination, but they will each print on a separate line.
+```sh
+gp -b -m -d -u
+>master
+>+1
+>-1
+>U…
 ```
 
 ### PS1
