@@ -6,6 +6,9 @@
 - Added new flags
 - Added new version of binary
 
+### Fixed
+- Fixed bug in regex, removed `^`
+
 ## [0.0.2]
 
 ### Fixed
