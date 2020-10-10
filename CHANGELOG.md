@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.3]
+
+### Added
+- Added new flags
+- Added new version of binary
+
 ## [0.0.2]
 
 ### Fixed
