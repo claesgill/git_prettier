@@ -1,6 +1,11 @@
 # Git prettier
 This is a git prettifyer tool that formats the output of `git status` to a short format. The purpose of the tool is to use it in your `PS1` variable so that you allways are up to date with your git repo.
 
+## Content
+1. [Install](#install)
+1. [Usage](#usage)
+    1. [Examples](#examples)
+
 ## Install
 To get access to the `gp`-binary globally, you need to copy it into the bin folder:  
 ```sh
